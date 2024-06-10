@@ -94,7 +94,7 @@ app.use("/api", apiRouter);
 
 // Production-ready setup: What is it for, and when should I enable it?
 
-// The code includes commented sections to set up a production environment where the client and server are executed from the same processus.
+// The code includes commented sections to set up a production environment where the client and server are executed from the same processes.
 
 // What it's for:
 // - Serving client static files from the server, which is useful when building a single-page application with React.
@@ -121,7 +121,7 @@ app.use(express.static(reactBuildPath));
 
 app.get("*.*", express.static(publicFolderPath, { maxAge: "1y" }));
 
-// Redirect unhandled requests to the react index file
+// Redirect unhandled requests to the React index file
 
 app.get("*", (_, res) => {
   res.sendFile(path.join(reactBuildPath, "/index.html"));
