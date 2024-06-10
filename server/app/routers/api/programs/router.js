@@ -1,9 +1,20 @@
-const express = require('express');
+const express = require("express");
 
 const router = express.Router();
 
-const {browse} = require("../../../controllers/programsAction")
+/* ************************************************************************* */
+// Define Your API Routes Here
+/* ************************************************************************* */
 
-router.get("/", browse)
+// Import program-related actions
+const { browse, read } = require("../../../controllers/programsAction");
+
+// Route to get a list of programs
+router.get("/", browse);
+
+// Route to get one program
+router.get("/:id", read);
+
+/* ************************************************************************* */
 
 module.exports = router;

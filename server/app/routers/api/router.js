@@ -9,6 +9,10 @@ const {sayWelcome} = require("../../controllers/sayActions");
 
 router.use("/home", sayWelcome);
 
+const categoriesRouter = require("./categories/router");
+
+router.use("/categories", categoriesRouter);
+
 const itemsRouter = require("./items/router");
 
 router.use("/items", itemsRouter);
