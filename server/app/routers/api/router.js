@@ -7,7 +7,7 @@ const router = express.Router();
 /* ************************************************************************* */
 const {sayWelcome} = require("../../controllers/sayActions");
 
-router.use("/home", sayWelcome);
+router.get('/home', sayWelcome);
 
 const categoriesRouter = require("./categories/router");
 
